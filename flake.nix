@@ -153,6 +153,10 @@
       url = "github:sontungexpt/witch/main";
       flake = false;
     };
+    neon = {
+      url = "github:rafamadriz/neon/main";
+      flake = false;
+    };
     nvim-git-messenger = {
       url = "github:rhysd/git-messenger.vim/master";
       flake = false;
@@ -251,6 +255,7 @@
     , nvim-harpoon
     , nvim-tokyo
     , witch
+    , neon
     , nvim-git-messenger
     , nvim-hop
     , nvim-merge-tool

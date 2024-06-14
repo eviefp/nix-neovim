@@ -1,5 +1,22 @@
 {
   "nodes": {
+    "neon": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669575413,
+        "narHash": "sha256-0G8JDXz8cKZnUPSX4Gx/okiaHl6jGMsCep/uaU5fr+U=",
+        "owner": "rafamadriz",
+        "repo": "neon",
+        "rev": "7765aaa7d1cd3804176140644640766e4411c766",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rafamadriz",
+        "ref": "main",
+        "repo": "neon",
+        "type": "github"
+      }
+    },
     "nvim-abolish": {
       "flake": false,
       "locked": {
@@ -869,6 +886,7 @@
     },
     "root": {
       "inputs": {
+        "neon": "neon",
         "nvim-abolish": "nvim-abolish",
         "nvim-bbye": "nvim-bbye",
         "nvim-better-whitespace": "nvim-better-whitespace",

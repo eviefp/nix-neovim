@@ -216,6 +216,11 @@ with inputs; let
     src = witch;
   };
 
+  nvim-neon = vimUtils.buildVimPlugin {
+    name = "neon-main";
+    src = neon;
+  };
+
   gitMessenger = vimUtils.buildVimPlugin {
     name = "git-messenger.vim-master-2e67899";
     src = nvim-git-messenger;
@@ -356,6 +361,7 @@ in
       harpoon
       tokyo
       nvim-witch
+      nvim-neon
       gitMessenger
       hop
       merge
