@@ -93,11 +93,6 @@ with inputs; let
     '';
   };
 
-  treesitter = vimUtils.buildVimPlugin {
-    name = "nvim-treesitter-master-620cc93";
-    src = nvim-treesitter;
-  };
-
   lspConfig = vimUtils.buildVimPlugin {
     name = "nvim-lspconfig-master-c510964";
     src = nvim-lspconfig;
@@ -162,11 +157,6 @@ with inputs; let
     '';
   };
 
-  telescopefzf = vimUtils.buildVimPlugin {
-    name = "telescope-fzf-native.nvim-main-b8662b0";
-    src = nvim-telescope-fzf;
-  };
-
   devIcons = vimUtils.buildVimPlugin {
     name = "nvim-dev-webicons-master-634e268";
     configurePhase = ''
@@ -221,6 +211,11 @@ with inputs; let
     src = nvim-tokyo;
   };
 
+  nvim-witch = vimUtils.buildVimPlugin {
+    name = "witch-main";
+    src = witch;
+  };
+
   gitMessenger = vimUtils.buildVimPlugin {
     name = "git-messenger.vim-master-2e67899";
     src = nvim-git-messenger;
@@ -267,11 +262,6 @@ with inputs; let
     src = nvim-material;
   };
 
-  tresitter-refactor = vimUtils.buildVimPlugin {
-    name = "nvim-treesitter-refactor-master-0dc8069";
-    src = nvim-treesitter-refactor;
-  };
-
   telescope-file-browser = vimUtils.buildVimPlugin {
     name = "telescope-file-browser.nvim-master-d06fe1d";
     src = nvim-telescope-file-browser;
@@ -279,11 +269,6 @@ with inputs; let
       rm -rf Makefile
     '';
   };
-
-  # nerveux = vimUtils.buildVimPlugin {
-  #   name = "nerveux.nvim-master";
-  #   src = sources."nerveux.nvim";
-  # };
 
   telescope-ui-select = vimUtils.buildVimPlugin {
     name = "telescope-ui-select";
@@ -370,6 +355,7 @@ in
       trouble
       harpoon
       tokyo
+      nvim-witch
       gitMessenger
       hop
       merge
@@ -379,7 +365,6 @@ in
       fairyfloss
       material
       telescope-file-browser
-      # nerveux
       telescope-ui-select
       vim-fish-syntax
       libp

@@ -69,10 +69,6 @@
       url = "github:nvim-telescope/telescope.nvim/master";
       flake = false;
     };
-    nvim-treesitter = {
-      url = "github:nvim-treesitter/nvim-treesitter/master";
-      flake = false;
-    };
     nvim-lspconfig = {
       url = "github:neovim/nvim-lspconfig/master";
       flake = false;
@@ -117,10 +113,6 @@
       url = "github:lewis6991/gitsigns.nvim/main";
       flake = false;
     };
-    nvim-telescope-fzf = {
-      url = "github:nvim-telescope/telescope-fzf-native.nvim/main";
-      flake = false;
-    };
     nvim-dev-webicons = {
       url = "github:kyazdani42/nvim-web-devicons/master";
       flake = false;
@@ -157,6 +149,10 @@
       url = "github:folke/tokyonight.nvim/main";
       flake = false;
     };
+    witch = {
+      url = "github:sontungexpt/witch/main";
+      flake = false;
+    };
     nvim-git-messenger = {
       url = "github:rhysd/git-messenger.vim/master";
       flake = false;
@@ -187,10 +183,6 @@
     };
     nvim-material = {
       url = "github:kaicataldo/material.vim/main";
-      flake = false;
-    };
-    nvim-treesitter-refactor = {
-      url = "github:nvim-treesitter/nvim-treesitter-refactor/master";
       flake = false;
     };
     nvim-telescope-file-browser = {
@@ -238,7 +230,6 @@
     , nvim-solarized
     , nvim-plenary
     , nvim-telescope
-    , nvim-treesitter
     , nvim-lspconfig
     , nvim-cmp
     , nvim-cmp-path
@@ -250,7 +241,6 @@
     , nvim-cmp-latex-symbols
     , nvim-cmp-lua
     , nvim-gitsigns
-    , nvim-telescope-fzf
     , nvim-dev-webicons
     , nvim-eunuch
     , nvim-which-key
@@ -260,6 +250,7 @@
     , nvim-trouble
     , nvim-harpoon
     , nvim-tokyo
+    , witch
     , nvim-git-messenger
     , nvim-hop
     , nvim-merge-tool
@@ -268,7 +259,6 @@
     , nvim-snitch
     , nvim-fairy-floss
     , nvim-material
-    , nvim-treesitter-refactor
     , nvim-telescope-file-browser
     , nvim-telescope-ui-select
     , nvim-fish-syntax
