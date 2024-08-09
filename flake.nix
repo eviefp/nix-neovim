@@ -1,5 +1,8 @@
 {
   inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+
     nvim-visuals-multi = {
       url = "github:mg979/vim-visual-multi/master";
       flake = false;
@@ -217,6 +220,8 @@
 
   outputs =
     inputs@{ self
+    , nixpkgs
+    , flake-utils
     , nvim-visuals-multi
     , nvim-bbye
     , nvim-kommentary
@@ -270,9 +275,12 @@
     , nvim-ranger
     , nvim-libp
     , nvim-pest
-    }: {
-      neovim-with-packages = pkgs: import ./neovim.nix {
-        inherit inputs pkgs;
+    }: flake-utils.lib.eachDefaultSystem (system: {
+
+      packages.neovim-with-packages = import ./neovim.nix {
+        inherit inputs;
+        pkgs = nixpkgs.legacyPackages.${system};
       };
-    };
+
+    });
 }
