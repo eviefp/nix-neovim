@@ -527,6 +527,23 @@
         "type": "github"
       }
     },
+    "nvim-mini-icons": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724143170,
+        "narHash": "sha256-TF6F6mF7g8faWqL4nrA5n4QeZoZDpBurCqLZT+Mrb3Y=",
+        "owner": "echasnovski",
+        "repo": "mini.icons",
+        "rev": "12e7b5d47bfc1b4c5ba4278fb49ec9100138df14",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "ref": "main",
+        "repo": "mini.icons",
+        "type": "github"
+      }
+    },
     "nvim-nix": {
       "flake": false,
       "locked": {
@@ -951,6 +968,7 @@
         "nvim-markdown": "nvim-markdown",
         "nvim-material": "nvim-material",
         "nvim-merge-tool": "nvim-merge-tool",
+        "nvim-mini-icons": "nvim-mini-icons",
         "nvim-nix": "nvim-nix",
         "nvim-octo": "nvim-octo",
         "nvim-pest": "nvim-pest",

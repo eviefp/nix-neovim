@@ -306,6 +306,11 @@ with inputs; let
     name = "pest.vim";
     src = nvim-pest;
   };
+
+  mini-icons = vimUtils.buildVimPlugin {
+    name = "mini.icons";
+    src = nvim-mini-icons;
+  };
 in
 (pkgs.neovim.override {
   viAlias = true;
@@ -376,6 +381,7 @@ in
       libp
       ranger-nvim
       pest
+      mini-icons
     ];
   };
 })

@@ -216,70 +216,18 @@
       url = "github:pest-parser/pest.vim/master";
       flake = false;
     };
+    nvim-mini-icons = {
+      url = "github:echasnovski/mini.icons/main";
+      flake = false;
+    };
   };
 
   outputs =
-    inputs@{ self
-    , nixpkgs
-    , flake-utils
-    , nvim-visuals-multi
-    , nvim-bbye
-    , nvim-kommentary
-    , nvim-tabular
-    , nvim-rainbow
-    , nvim-abolish
-    , nvim-fugitive
-    , nvim-rhubarb
-    , nvim-markdown
-    , nvim-purescript
-    , nvim-nix
-    , nvim-signature
-    , nvim-better-whitespace
-    , nvim-lexical
-    , nvim-solarized
-    , nvim-plenary
-    , nvim-telescope
-    , nvim-lspconfig
-    , nvim-cmp
-    , nvim-cmp-path
-    , nvim-cmp-vsnip
-    , nvim-vim-vsnip
-    , nvim-cmp-lsp
-    , nvim-lspkind
-    , nvim-cmp-emoji
-    , nvim-cmp-latex-symbols
-    , nvim-cmp-lua
-    , nvim-gitsigns
-    , nvim-dev-webicons
-    , nvim-eunuch
-    , nvim-which-key
-    , nvim-telescope-symbols
-    , nvim-lualine
-    , nvim-octo
-    , nvim-trouble
-    , nvim-harpoon
-    , nvim-tokyo
-    , witch
-    , neon
-    , nvim-git-messenger
-    , nvim-hop
-    , nvim-merge-tool
-    , nvim-truezen
-    , nvim-sandwich
-    , nvim-snitch
-    , nvim-fairy-floss
-    , nvim-material
-    , nvim-telescope-file-browser
-    , nvim-telescope-ui-select
-    , nvim-fish-syntax
-    , nvim-ranger
-    , nvim-libp
-    , nvim-pest
-    }: flake-utils.lib.eachDefaultSystem (system: {
+    inputs: inputs.flake-utils.lib.eachDefaultSystem (system: {
 
       packages.neovim-with-packages = import ./neovim.nix {
         inherit inputs;
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = inputs.nixpkgs.legacyPackages.${system};
       };
 
     });
